@@ -17,7 +17,7 @@ public class Portal : MonoBehaviour
         {
             Debug.Log($"{collision.name} teleported to {_destination.transform.position}");
             
-            rb2D.MovePosition(_destination.transform.position);
+            rb2D.transform.position = _destination.transform.position;
             _destination._cantEnter.Add(collision.gameObject);
         }
     }
